@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.toolbar {
+   
+    flex-direction: column;
+    width: 30px;
+    height: 35px;
+    margin-bottom: 10px;
+    gap: 5px;
+    
+}
+
+.tool-btn {
+    background-color: aliceblue;
+    border: none;
+    color: white;
+    padding-top: 14px;
+    padding-left: 10px;
+    padding-right: 35px;
+    padding-bottom: 30px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+   border-radius: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 35px;
+    
+    
+    
+}
+
+.tool-btn:hover {
+    background-color: #898b95;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color:#686971;
+    border-width: 1px;
+}
+
+.tool-btn:active {
+    background-color:#686971;
+    transform: translateY(2px);
+    border-color: #686971;
+    border-width: 1px;
+}
+.ugli{
+    border-radius: 30px 30px 0 0  ;
+}
+#icons{
+    width: 20px;
+    height: 20px;
+    padding-left: -13px;
+    margin-bottom: 5px;
+    margin-top: -5px;
+    margin-left: 2px;
+    
+}
+.kanva{
+    width:1400px;
+     height:600px;
+     border:1px solid #000000; 
+     border-radius: 20px;
+      padding-left: 500px ; 
+      padding-right: 200px;
+      
+       margin-left: 60px;
+       margin-top: -25px;
+       margin-bottom: -100px;
+}
+.big{
+    width:23px;
+    height:23px;
+    border-radius: 30px;
+}
+.medium{
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+}
+.small{
+    width: -5px;
+    height:15px;
+    border-radius:30px;
+}
+.list-group{
+   
+        width: 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        left: 60px; /* Adjust this to position it next to #size-tab */
+        top: 23px; 
+}
+
+.eraser{
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0px; 
+    top: 98px; 
+}
+.big-w,.big-b,.big-r,.big-y,.big-g,.big-bl{
+    width:23px;
+    height:23px;
+    border-radius: 30px;
+}
+.colors{
+    width: 700px; 
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    gap: 5px; 
+    position: absolute;
+    left: 14px;
+    top: 50px;
+
+}
+.big-w { background-color: white; }
+.big-b { background-color: black; }
+.big-r { background-color: red; }
+.big-y { background-color: yellow; }
+.big-g { background-color: green; }
+.big-bl { background-color: blue; }
+
+
+
+
+
+
+
