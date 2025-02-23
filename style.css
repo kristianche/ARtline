@@ -34,9 +34,7 @@ body {
     transition: all 0.3s ease;
     width: 30px;
     height: 35px;
-    
-    
-    
+
 }
 
 .tool-btn:hover {
@@ -98,7 +96,7 @@ body {
         flex-direction: column;
         align-items: center;
         position: absolute;
-        left: 60px; /* Adjust this to position it next to #size-tab */
+        left: 60px; 
         top: 23px; 
 }
 
@@ -111,7 +109,7 @@ body {
     left: 0px; 
     top: 98px; 
 }
-.big-w,.big-b,.big-r,.big-y,.big-g,.big-bl{
+.big-p,.big-b,.big-r,.big-y,.big-g,.big-bl{
     width:23px;
     height:23px;
     border-radius: 30px;
@@ -127,14 +125,16 @@ body {
     top: 50px;
 
 }
-.big-w { background-color: white; }
 .big-b { background-color: black; }
 .big-r { background-color: red; }
-.big-y { background-color: yellow; }
 .big-g { background-color: green; }
 .big-bl { background-color: blue; }
+.big-y { background-color: yellow; }
+.big-p { background-color: purple; }
 
-
+.colors, .razmer, .eraser {
+    display: none;
+}
 
 
 
