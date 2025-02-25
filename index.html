@@ -20,14 +20,45 @@
       $(".colors, .eraser").hide();
         $(".razmer").toggle(); 
     });
+
     $("#color-tab").click(function(){     
     $(".razmer, .eraser").hide();       // console.log("Color tab clicked"); --> proverka
     $(".colors").toggle();             // console.log($(".colors").length);  --> proverka
     });
-    $("#eraser-tab").click(function(){
-      $(".razmer, .colors").hide();
-        $(".eraser").toggle();
+
+    
+
+    $("#big-size, #medium-size, #small-size").click(function(){
+      $(".razmer").hide();
     });
+  
+
+    $("#black-btn, #red-btn, #green-btn, #blue-btn, #yellow-btn, #purple-btn").click(function(){
+      $(".colors").hide(250);
+    });
+    
+
+    
+    $("#eraser-tab, #save-tab").click(function(){
+      $(this).toggleClass("activiran");
+    });
+
+    $("#save-tab, #size-tab, #color-tab").click(function(){
+      $("#eraser-tab").removeClass("activiran")
+    });
+
+    $("#eraser-tab, #size-tab, #color-tab").click(function(){
+      $("#save-tab").removeClass("activiran")
+    });
+    
+
+    $("#save-tab").click(function(){
+      $(".colors, .razmer").hide()
+    });
+    $("#eraser-tab").click(function(){
+      $(".razmer, .colors").hide()
+    });
+    
 });
 
 
@@ -69,19 +100,7 @@
      Your browser does not support the HTML canvas tag.
      </canvas>
 
-   <!--</div>
-    <div class="size">
-      <ul class="list-group">
-        <li class="list-group-item">
-          <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
-          <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
-          <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
-        </li>
-      </ul>
-    </div>
-  </div>--> 
-
-  <div class="size">
+  
     <div class="razmer">
     <ul class="list-group">
       <li class="list-group-item">
@@ -91,15 +110,6 @@
       </li>
     </ul>
   </div>
-    <div class="eraser">
-      <ul class="list-group">
-        <li class="list-group-item">
-          <button class="big" id="big-eraser"></button>
-          <button class="medium" id="medium-eraser"></button>
-          <button class="small" id="small-eraser"></button>
-        </li>
-      </ul>
-    </div>
     <div class="colors">
       <ul class="list-group">
         <li class="list-group-item">

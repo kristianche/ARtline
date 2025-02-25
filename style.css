@@ -136,7 +136,52 @@ body {
     display: none;
 }
 
+.big:hover, .medium:hover, .small:hover {
+    background-color: rgb(60, 59, 59);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color:black;
+    border-width: 1px;
+}
 
+.big-b:hover{
+    background-color: rgb(60, 59, 59);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color:black;
+    border-width: 1px; 
+}
+.big-r:hover{
+    background-color: rgb(253, 41, 41);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color:black;
+    border-width: 1px; 
+}
+.big-g:hover{
+    background-color:rgb(19, 173, 19);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color:black;
+    border-width: 1px; 
+}
+.big-bl:hover{
+    background-color: rgb(58, 58, 251);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color:black;
+    border-width: 1px; 
+}
+.big-y:hover{
+    background-color: rgb(250, 250, 112);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color:black;
+    border-width: 1px; 
+}
+.big-p:hover{
+    background-color: rgb(174, 3, 174);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color:black;
+    border-width: 1px; 
+}
 
+.tool-btn.activiran{
+    background-color: #7a7c85;
+}
 
 
