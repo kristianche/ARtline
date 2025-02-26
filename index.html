@@ -39,16 +39,19 @@
     
 
     
-    $("#eraser-tab, #save-tab").click(function(){
+    $("#eraser-tab, #save-tab, #delete-tab").click(function(){
       $(this).toggleClass("activiran");
     });
 
-    $("#save-tab, #size-tab, #color-tab").click(function(){
+    $("#save-tab, #size-tab, #color-tab, #delete-tab").click(function(){
       $("#eraser-tab").removeClass("activiran")
     });
 
-    $("#eraser-tab, #size-tab, #color-tab").click(function(){
-      $("#save-tab").removeClass("activiran")
+    $("#eraser-tab, #size-tab, #color-tab, #delete-tab").click(function(){
+      $("#save-tab").removeClass("activiran");
+    });
+    $("#eraser-tab, #size-tab, #color-tab, #save-tab").click(function(){
+      $("#delete-tab").removeClass("activiran");
     });
     
 
@@ -58,6 +61,24 @@
     $("#eraser-tab").click(function(){
       $(".razmer, .colors").hide()
     });
+    $("#delete-tab").click(function(){
+      $(".razmer, .colors").hide()
+    });
+
+    $("#delete-tab").click(function(){
+      $(".popup, .popup-overlay").fadeIn();
+    })
+    $("#close-popup").click(function(){
+      $(".popup, .popup-overlay").fadeOut();
+    });
+    $("#delete-popup").click(function(){
+      $(".popup, .popup-overlay").fadeOut();
+    });
+
+    $("#close-popup, #delete-popup").click(function(){
+      $("#delete-tab").removeClass("activiran");
+    });
+  
     
 });
 
@@ -93,6 +114,12 @@
           </div>
         </button>
         <br>
+        <button class="tool-btn" id="delete-tab">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" id="icons" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M15.854 8.854 12.708 12l3.146 3.146a.5.5 0 0 1-.708.707L12 12.707l-3.146 3.146a.498.498 0 0 1-.708 0 .5.5 0 0 1 0-.707L11.292 12 8.146 8.854a.5.5 0 0 1 .707-.707l3.146 3.146 3.146-3.146a.5.5 0 0 1 .707.707ZM24 12c0 6.617-5.383 12-12 12S0 18.617 0 12 5.383 0 12 0s12 5.383 12 12Zm-1 0c0-6.065-4.935-11-11-11S1 5.935 1 12s4.935 11 11 11 11-4.935 11-11Z" fill="#000000" opacity="1" data-original="#000000" class=""></path></g></svg>
+          </div>
+        </button>
+       <br>
     </div>
     
     <div class="kanva">
@@ -123,6 +150,11 @@
       </ul>
     </div>
   </div>
-
+  <div class="popup-overlay"></div> 
+    <div class="popup">
+        <p>Do you want to delete this?</p>
+        <button class="popup-btn" id="close-popup">No</button>
+        <button class="popup-btn" id="delete-popup">Yes</button>
+    </div>
 </body>
 </html>
