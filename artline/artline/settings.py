@@ -26,7 +26,13 @@ SECRET_KEY = 'django-insecure-+uovufncn3#(w!7asgs*#ckrru%yihhb^(^mql#%@sw&2pu4%q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["artlineapp.onrender.com"]
+ALLOWED_HOSTS = ["artline-1.onrender.com", "127.0.0.1"]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://artline-1.onrender.com",
+    "http://127.0.0.1:8000",
+]
+
 
 
 # Application definition
@@ -51,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'artline.urls'
 
@@ -118,13 +125,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# Additional static files directories (e.g., inside your app)
+STATICFILES_DIRS = [
+    BASE_DIR / 'artlineapp' / 'static',  # Points to your app's static folder
+]
+
+# Where to collect static files for production
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ["https://your-app-name.onrender.com"]
+
