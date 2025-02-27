@@ -25,38 +25,38 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    function saveDrawing() {
-        let canvas = document.querySelector("canvas")[1];
-        console.log(canvas)
-
-        if (!canvas) {
-            console.error("Canvas not found");
-            return;
-        }
-
-        let imageData = canvas.toDataURL("image/png");
-        console.log(canvas.toDataURL("image/png"));
-
-        fetch("/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "X-CSRFToken": getCsrfToken(),
-            },
-            body: JSON.stringify({ image: imageData }),
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === "success") {
-                alert("Drawing saved successfully at C:\\Users\\user\\Documents\\Artline Pictures");
-            } else {
-                alert("Error saving drawing: " + data.message);
-            }
-        })
-        .catch(error => {
-            console.error("Error:", error);
-        });
-    }
+//    function saveDrawing() {
+//        let canvas = document.querySelector("canvas")[1];
+//        console.log(canvas)
+//
+//        if (!canvas) {
+//            console.error("Canvas not found");
+//            return;
+//        }
+//
+//        let imageData = canvas.toDataURL("image/png");
+//        console.log(canvas.toDataURL("image/png"));
+//
+//        fetch("/", {
+//            method: "POST",
+//            headers: {
+//                "Content-Type": "application/json",
+//                "X-CSRFToken": getCsrfToken(),
+//            },
+//            body: JSON.stringify({ image: imageData }),
+//        })
+//        .then(response => response.json())
+//        .then(data => {
+//            if (data.status === "success") {
+//                alert("Drawing saved successfully at C:\\Users\\user\\Documents\\Artline Pictures");
+//            } else {
+//                alert("Error saving drawing: " + data.message);
+//            }
+//        })
+//        .catch(error => {
+//            console.error("Error:", error);
+//        });
+//    }
 
     function clearCanvas() {
         fetch("/", {
@@ -122,9 +122,9 @@ document.addEventListener("DOMContentLoaded", function () {
         sendUpdate("eraser_mode", true);
     });
 
-    document.getElementById("save-tab").addEventListener("click", function () {
-        saveDrawing();
-    });
+//    document.getElementById("save-tab").addEventListener("click", function () {
+//        saveDrawing();
+//    });
 
     document.getElementById("delete-popup").addEventListener("click", clearCanvas);
 });

@@ -45,11 +45,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'artlineapp'
+    'artlineapp',
+    'whitenoise'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -127,13 +129,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Additional static files directories (e.g., inside your app)
+# Directories to search for static files (app-level static folders)
 STATICFILES_DIRS = [
-    BASE_DIR / 'artlineapp' / 'static',  # Points to your app's static folder
+    os.path.join(BASE_DIR, 'artlineapp', 'static'),  # Points to your app's static folder
 ]
 
 # Where to collect static files for production
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# WhiteNoise configuration for serving static files in production
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
