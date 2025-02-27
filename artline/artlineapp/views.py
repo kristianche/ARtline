@@ -23,13 +23,12 @@ color_names = {"black": 0, "red": 1, "green": 2, "blue": 3, "yellow": 4, "purple
 canvas = np.ones((HEIGHT, WIDTH, 3), dtype=np.uint8) * 255
 tracking = False
 previous_points = []
-color_index = 0  #
+color_index = 0
 thickness = 5
 eraser_mode = False
 
 
 def get_screenshots_folder():
-    """Returns the user's Screenshots folder path based on OS."""
     home = Path.home()
 
     if os.name == "nt":
@@ -118,7 +117,6 @@ def home(request):
                 if not image_data:
                     return JsonResponse({"status": "error", "message": "No image data received"}, status=400)
 
-                # Remove the base64 prefix (if exists)
                 if image_data.startswith("data:image/png;base64,"):
                     image_data = image_data.split(",")[1]
                 else:
