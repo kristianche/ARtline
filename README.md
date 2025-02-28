@@ -3,12 +3,13 @@ Descripiton
 Национална олимпиада по Информационни технологии  2024/2025г.
 Проект 317: „АРтлайн“
 
-     Стартиране на проекта в Terminal:
-cd artline
+Стартиране на проекта в Terminal:
 
-pip install -r requirements.txt
+     cd artline
 
-py manage.py runserver
+     pip install -r requirements.txt
+
+     py manage.py runserver
 
 1. Тема на разработвания проект:  Проект за приложение за скициране чрез   добавена реалност 
 	Категория: Съвременни системи за визуална информация
