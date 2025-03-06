@@ -8,6 +8,8 @@
 
      pip install -r requirements.txt
 
+     py manage.py collectstatic
+
      py manage.py runserver
 
 1. Тема на разработвания проект:  Проект за приложение за скициране чрез   добавена реалност 
